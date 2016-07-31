@@ -53,6 +53,34 @@ function getPostsList($post_id_start = 0, $number = 1)
     return $post_array;
 }
 
+//оновлення поста
+function updatePost($post_id, $title, $content)
+{
+    global $DataBase;
+    $title = $DataBase->escape_string($title);
+    $content = $DataBase->escape_string($content);
+    $post_id = (int)$post_id;
+    $sql = "UPDATE `" . PR . "posts` SET `content` = '" . $content . "',`title`='" . $title . "' WHERE `id` = " . $post_id . ";";
+    $DataBase->query($sql);
+    if ($DataBase->errno === 0)
+        return true;
+    else
+        return false;
+}
+
+//видалення поста
+function removePost($post_id)
+{
+    global $DataBase;
+    $post_id = $DataBase->escape_string($post_id);
+    $sql = "DELETE FROM `" . PR . "posts` WHERE `id` = " . $post_id;
+    $DataBase->query($sql);
+    if ($DataBase->errno === 0)
+        return true;
+    else
+        return false;
+}
+
 function showArray($array)
 {
     echo '<pre>';
