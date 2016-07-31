@@ -1,0 +1,74 @@
+body {
+    background-color: cornsilk;
+}
+
+.heder {
+    text-align: center;
+    height: 20%;
+}
+
+.saite_bar {
+    width: 15%;
+    float: left;
+}
+
+.content, .saite_bar {
+
+    height: 78%;
+    display: inline-block;
+}
+
+.content {
+    width: 83%;
+    margin: 1%;
+    text-align: center;
+}
+
+.footer {
+    height: 20%;
+    width: 100%;
+    display: inline-block;
+}
+
+form input, table textarea {
+    font-size: 14px;
+    text-align: center;
+    border: 1px dotted darkblue;
+    border-radius: 5px;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+form input:hover, table textarea:hover {
+    -webkit-box-shadow: 0 0 37px -2px rgba(148, 95, 38, 1);
+    -moz-box-shadow: 0 0 37px -2px rgba(148, 95, 38, 1);
+    box-shadow: 0 0 37px -2px rgba(148, 95, 38, 1);
+    background-color: bisque;
+    border-radius: 15px;
+    border: 1px solid darkblue;
+
+}
+
+input, textarea {
+    outline: none;
+    resize: none;
+}
+
+table {
+    padding-top: 3%;
+    width: 50%;
+}
+
+.post_form table {
+    width: 100%;
+}
+input{
+    height: 30px;
+}
+.post_form table input, .post_form table textarea {
+    width: 100%;
+}
+
+.post_form table textarea {
+    height: 300px;
+}
